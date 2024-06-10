@@ -1,17 +1,17 @@
 """
 This Python script processes a directory of PDF files to extract specific financial data,
-namely dividend details, and writes this information into an Excel spreadsheet. The script
+namely dividend details and writes this information into an Excel spreadsheet. The script
 is designed to handle PDFs containing information on stock dividends, where each PDF
-follows a consistent format with the relevant data located on page 3 (In my experience this is always the case page 3 holds the dividend information, obviously if you have 100K shares this might be page 3 to x).
+follows a consistent format with the relevant data located on page 3 (In my experience, this is always the case; page 3 holds the dividend information. Obviously if you have 100K shares this might be page 3 to x).
 
 The main functions of the script are:
 1. `extract_dividend_details`: This function opens each PDF file, extracts the text from
    page 3, and uses regular expressions to find and extract the date, company name,
    dividend details, and the amount credited.
 2. `update_excel`: This function updates an Excel spreadsheet with the extracted data. If
-   the spreadsheet does not exist, it creates a new one with appropriate headers.
+   The spreadsheet does not exist; it is created as a new one with appropriate headers.
 3. `process_pdfs`: This function iterates through all PDF files in the specified directory,
-   calls the `extract_dividend_details` function for each PDF, and collects the extracted
+   calls the `extract_dividend_details` function for each PDF and collects the extracted
    data. It then calls `update_excel` to write the collected data to the Excel spreadsheet.
 
 The script ensures that the extracted data is written as numerical values where appropriate,
@@ -19,7 +19,7 @@ specifically for the dividend amounts, to facilitate any further data analysis o
 in the Excel file.
 
 Usage:
-1. Set the `pdf_directory` variable to the path of the directory containing the PDF files.
+1. Set the `pdf_directory` variable to the directory's path containing the PDF files.
 2. Set the `excel_file_path` variable to the path where the Excel file should be saved.
 3. Run the script to process the PDFs and update the Excel file with the extracted dividend details.
 """
